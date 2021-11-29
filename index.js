@@ -22,10 +22,11 @@ app.listen(port, () => {
 const transporter = nodemailer.createTransport({
     port: 465,
     host: "smtp.gmail.com",
-    auth: {
+     auth: {
+        type: 'OAuth2',
         user: 'lethabosithole01@gmail.com',
-        pass: 'Lesedi199010?',
-    },
+        accessToken: 'AIzaSyDt7_uoi7Ikw5Z2oviOLyD8SOK6AIOQvy0'
+}
     from: 'lethabosithole01@gmail.com',
     secure: true,
     tls: {
