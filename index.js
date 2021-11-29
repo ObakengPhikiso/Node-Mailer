@@ -28,6 +28,10 @@ const transporter = nodemailer.createTransport({
     },
     from: 'lethabosithole01@gmail.com',
     secure: true,
+    tls: {
+        // do not fail on invalid certs
+        rejectUnauthorized: false
+    }
 });
 
 route.post('/email', (req, res) => {
